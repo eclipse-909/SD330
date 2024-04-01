@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Refrigerator</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            header {
+                width: 100%;
+                background-color: #333333;
+                color: #ffffff;
+                text-align: center;
+                padding: 10px 0;
+                position: fixed;
+                top: 0;
+                z-index: 1;
+            }
+            #fridgeDisplay {
+                width: 400px;
+                height: 500px;
+                border: 20px solid #a9a9a9;
+                border-radius: 20px;
+                background-color: #ffffff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                position: relative;
+            }
+            #onOff {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: green;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                transition: background-color 0.3s;
+            }
+            #onOff.off {
+                background-color: red;
+            }
+            #time {
+                position: absolute;
+                top: 80px;
+                left: 20px;
+                font-size: 24px;
+            }
+            #buttonContent {
+                position: absolute;
+                top: 140px;
+                left: 20px;
+                font-size: 18px;
+                color: #333333;
+                border: 2px solid black;
+                border-radius: 10px;
+                width: 84%;
+                height: 64%;
+                padding: 10px;
+            }
+            #temp {
+                margin-bottom: 20px;
+            }
+            button {
+                margin-right: 10px;
+                width: 80px;
+                height: 80px;
+                font-size: 14px;
+                border: none;
+                background-color: #f0f0f0;
+                border-radius: 20px;
+                cursor: pointer;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            button img {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 5px;
+            }
+            footer {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 12px;
+                color: #333333;
+            }
+        </style>
+        <script>
+            function refreshTime() {
+                let currDateTime = new Date();
+                document.getElementById("time").innerHTML = currDateTime.toLocaleDateString() + "  -  " + currDateTime.toLocaleTimeString();
+            }
+            function toggleDisplay() {
+                let display = document.getElementById("fridgeDisplay");
+                let buttonContent = document.getElementById("buttonContent");
+                let onOffButton = document.getElementById("onOff");
+                if (buttonContent.style.display === "none") {
+                    buttonContent.style.display = "block";
+                    onOffButton.classList.remove("off");
+                } else {
+                    buttonContent.style.display = "none";
+                    onOffButton.classList.add("off");
+                }
+            }
+        </script>
+    </head>
+    <body onload="refreshTime(); setInterval(refreshTime, 1000);">
+        <header><h1>Fridge Display</h1></header>
+        <div id="fridgeDisplay">
+            <button id="onOff" onclick="toggleDisplay()"></button>
+            <div id="time"></div>
+            <div id="buttonContent">
+                <div id="temp">
+                    Fridge temp: 37&degF<br>
+                    Freezer temp: 27&degF
+                </div>
+                <button id="TV"><img src="https://icons.iconarchive.com/icons/flat-icons.com/flat/512/Flat-TV-icon.png" alt="TV"></button></button>
+                <button id="Google"><img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google"></button>
+                <button id="Contents"><img src="https://cdn4.iconfinder.com/data/icons/furniture-294/510/Refrigerator_fridge_open-512.png" alt="Contents"></button>
+            </div>
+        </div>
+        <footer><small>&copy Ethan Morton March 4, 2024</small></footer>
+    </body>
+</html>
