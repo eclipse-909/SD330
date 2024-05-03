@@ -124,7 +124,7 @@ function displaySpot(data) {
             case "Filled":
                 htmlString += "<p>Time Filled: " + new Date(spot.filledDateTime).toLocaleString() + "</p>";
                 break;
-            case "available":
+            case "Available":
                 document.getElementById("actions").innerHTML = "<button class='listButton' onclick='alert(`Spot Reserved`)'>Reserve</button>";
                 break;
             default:
