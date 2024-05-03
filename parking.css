@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f9fc;
+    color: #333;
+}
+header {
+    background-color: #b31b1b;
+    color: #fff;
+    padding: 10px 20px;
+}
+header img {
+    height: 100px;
+    margin-right: 10px;
+}
+nav {
+    background-color: #5ba2d3;
+    padding: 10px 20px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+nav ul li a:hover {
+    background-color: #356c8c;
+}
+section {
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-bottom: 30px;
+}
+footer {
+    background-color: #5ba2d3;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+#lotsList {
+    margin-top: 20px;
+}
+#lotsList > div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+#lotsList img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    max-width: 800px;
+}
+#lotsList h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+#lotsList p {
+    margin: 10px 0;
+}
+.listButton {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.listButton:hover {
+    background-color: #356c8c;
+}
+#lotsList a.button:hover {
+    background-color: #356c8c;
+}
+#lotHeader {
+    margin-top: 20px;
+    text-align: center;
+}
+#lotHeader img {
+    max-width: 800px;
+    height: auto;
+    margin-top: 10px;
+}
+#spotsList {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    gap: 15px;
+    margin: 20px auto;
+    margin-top: 20px;
+    max-width: 55%;
+}
+.spot {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border: black;
+    border-style: solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    height: 210px;
+    text-align: center;
+}
+.spot img {
+    max-width: 40px;
+    height: auto;
+}
+#spotContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    max-width: 400px;
+}
+#actions {
+    justify-content: center;
+    margin-top: 10px;
+}

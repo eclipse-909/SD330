@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="https://my.marist.edu/myMarist62-theme/images/favicon.ico"/>
+        <title>Marist Parking</title>
+        <link rel="stylesheet" href="./parking.css">
+        <script src="./parking.js"></script>
+    </head>
+    <body onload="getParkingJSON(displayLots)">
+        <header>
+            <a href="./parking.html" class="button"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Marist_Red_Foxes_logo.svg/1200px-Marist_Red_Foxes_logo.svg.png" alt="Marist Logo"></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="./parking404.html" class="button">Login</a></li>
+                <li><a href="./parking404.html" class="button">Help</a></li>
+                <li><a href="./parking404.html" class="button">Contact</a></li>
+                <li><a href="./parking404.html" class="button">Tickets</a></li>
+                <li><a href="./parking404.html" class="button">Account</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Welcome to Marist Parking</h2>
+            <h3>Parking Lots</h3>
+            <div id="lotsList"></div><!--This div will get populated onload-->
+        </section>
+        <footer>
+            <p>&copy Ethan Morton May 3, 2024</p>
+        </footer>
+    </body>
+</html>

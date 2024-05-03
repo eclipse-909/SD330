@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="https://my.marist.edu/myMarist62-theme/images/favicon.ico"/>
+        <title>Marist Parking</title>
+        <link rel="stylesheet" href="./parking.css">
+        <script src="./parking.js"></script>
+    </head>
+    <body onload="getParkingJSON(displaySpot)">
+        <header>
+            <a href="./parking.html" class="button"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Marist_Red_Foxes_logo.svg/1200px-Marist_Red_Foxes_logo.svg.png" alt="Marist Logo"></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="./parking.html" class="button">Back to Home</a></li>
+                <li><a href="./parkingLot.html" class="button">Back to Lot Spaces</a></li>
+            </ul>
+        </nav>
+        <section style="padding-left: 0px;"><!--Inline CSS to center content-->
+            <div id="spotContainer">
+                <div id="spot"></div><!--This div will get populated onload-->
+                <div id="actions"></div><!--This div will get populated onload-->
+            </div>
+        </section>
+        <footer>
+            <p>&copy Ethan Morton May 3, 2024</p>
+        </footer>
+    </body>
+</html>
