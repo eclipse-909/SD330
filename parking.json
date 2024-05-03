@@ -2,7 +2,7 @@
     "parkingLots":[
         {
             "name":"McCann",
-            "img":"./mccann.pmg",
+            "img":"./mccann.png",
             "totalSpaces":12,
             "residential":false,
             "comments":"The parking lot for The McCann Center, Sheahan Hall, and Leo Hall. This parking lot will often be reserved and sectioned off for events at The McCann Center.",
